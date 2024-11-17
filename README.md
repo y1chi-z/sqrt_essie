@@ -16,7 +16,7 @@ python sqrt.py --n=25
 ## Dependencies:
 - Python 3 or greater
 - Python pacakges:
-  - `docopt`
+  - `click`
   - `math`
 
 ## Credits

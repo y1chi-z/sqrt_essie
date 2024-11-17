@@ -1,22 +1,16 @@
 # author: Tiffany Timbers
 # date: 2020-02-23
 
-"""Calculates and prints the square root of a given number.
-Usage: sqrt.py --n=<n>
+"""Calculates and prints the square root of a given number."""
 
-Options:
---n=<n>    Number for which the square root should be calculated
-"""
-
-from docopt import docopt
+import click
 import math
 
-opt = docopt(__doc__)
-
-def main(number):
-  number = int(number)
-  print(math.sqrt(number))
-    
+@click.command()
+@click.option("--n", type=int, required=True, help="Number for which the square root should be calculated")
+def main(n):
+    print(math.sqrt(number))
+    return math.sqrt(number)
 
 if __name__ == "__main__":
-  main(opt["--n"])
+    main()
